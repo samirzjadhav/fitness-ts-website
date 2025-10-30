@@ -1,11 +1,11 @@
 import React from 'react'
 
-const index = () => {
+type Props = {}
+
+const Navbar = (props: Props) => {
   return (
-    <div>
-      
-    </div>
+    <div>index</div>
   )
 }
 
-export default index
+export default Navbar

@@ -2,10 +2,11 @@ import { useState } from "react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 import logo from "@/assets/Logo.png"
 import Link from "./Link"
+import type { SelectedPage } from "@/shared/types"
 
 type Props = {
-  selectedPage: string;
-  setSelectedPage: (value: string) => void
+  selectedPage: SelectedPage;
+  setSelectedPage: (value: SelectedPage) => void
 }
 
 const Navbar = ({selectedPage, setSelectedPage}: Props) => {

@@ -12,7 +12,8 @@ type Props = {
 
 const Navbar = ({selectedPage, setSelectedPage}: Props) => {
   const flexBetween  = "flex items-center justify-between"
-  const isAboveMediumScreen = useMediaQuery("(min-width: 106 0px)") 
+  const [isMenuToggle, setIsMenuToggle] = useState<boolean>(false)
+  const isAboveMediumScreen = useMediaQuery("(min-width: 1060px)") 
   return (
     <nav>
       <div className={`${flexBetween} fixed top-0 z-30 w-full py-6`}>
@@ -37,12 +38,13 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
             <button>Become a Member</button>
            </div>
         </div> ):(
-          <div>
-
-          </div>
+          <button className="rounded-full bg-secondary-500 p-2" onClick={()=> setIsMenuToggle(!isMenuToggle)}> 
+           <Bars3Icon className="h-6 w-6" />
+          </button>
+ 
         )}    
         </div>
-      </div>
+      </div>f
     </nav>
   )
 }

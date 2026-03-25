@@ -9,8 +9,9 @@ type Props ={
 
 const ActionButton = ({children,setSelectedPage}: Props) => {
   return (
-    <ActionButton className='rounded-md bg-secondary-500 px-10'></ActionButton>
+    <AnchorLink className='rounded-md bg-secondary-500 px-10 py-2 hover:bg-primary-500 hover:text-white'></AnchorLink>
   )
 }
 
-export default ActionButton
+
+export default ActionButton 

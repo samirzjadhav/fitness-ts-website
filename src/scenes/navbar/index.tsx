@@ -5,6 +5,7 @@ import Link from "./Link"
 import type { SelectedPage } from "@/shared/types"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import ActionButton from "@/shared/ActionButton"
+import { div } from "framer-motion/client"
 
 type Props = {
   selectedPage: SelectedPage;
@@ -43,10 +44,13 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
           <button className="rounded-full bg-secondary-500 p-2" onClick={()=> setIsMenuToggle(!isMenuToggle)}> 
            <Bars3Icon className="h-6 w-6 text-white" />
           </button>
- 
         )}    
         </div>
-      </div>f
+      </div>
+      {/* MOBILE MENU MODAL */}
+      {!isAboveMediumScreen && isMenuToggle && (
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl"></div>
+      )}
     </nav>
   )
 }

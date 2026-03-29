@@ -49,7 +49,14 @@ const Navbar = ({selectedPage, setSelectedPage}: Props) => {
       </div>
       {/* MOBILE MENU MODAL */}
       {!isAboveMediumScreen && isMenuToggle && (
-        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl"></div>
+        <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary-100 drop-shadow-xl">
+          {/* CLOSE ICON  */}
+          <div className="flex justify-end p-12">
+            <button onClick={()=>setIsMenuToggle(!isMenuToggle)}>
+                     <XMarkIcon className="h-6 w-6 text-gray-600"/>
+            </button>
+          </div>
+        </div>
       )}
     </nav>
   )
